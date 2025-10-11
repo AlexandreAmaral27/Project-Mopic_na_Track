@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Mopic</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilo/team.css" />
+  </head>
+  <body>
+      <label class="burger">
+      <input type="checkbox" id="menu-toggle" oninput="toggleMenu()" />
+      <span class="burger-icon"></span>
+    </label>
+
+    <div class="menu">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Projectos</a>
+        <a href="team.html">Team</a>
+        <a href="#">Galeria</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <ul class="accordion">
+      <li>
+        <img src="imagens/bruno/bruno01.jpg" />
+        <div class="content">
+          <span>
+            <h2>Bruno Rodas</h2>
+            <p>Rapper</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <img src="imagens/feboy/feboy.jpg" />
+        <div class="content">
+          <span>
+            <h2>Feboy Freezer</h2>
+            <p>Rapper</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <img src="imagens/bruno/bruno.jpg" />
+        <div class="content">
+          <span>
+            <h2>Hoboy</h2>
+            <p>Rapper</p>
+          </span>
+        </div>
+      </li>
+      <li>
+        <img src="imagens/bruno/bruno.jpg" />
+        <div class="content">
+          <span>
+            <h2>Braulio</h2>
+            <p>....</p>
+          </span>
+        </div>
+      </li>
+    </ul>
+
+     <script>
+      const intro = document.getElementById("intro");
+      const menuCheckbox = document.getElementById("menu-toggle");
+      const menuLinks = document.querySelectorAll(".menu a");
+      const introSound = document.getElementById("introSound");
+
+      window.addEventListener("load", () => {
+        introSound.play().catch(() => console.log("Som bloqueado pelo navegador"));
+        setTimeout(() => {
+          intro.classList.add("hidden");
+        }, 3000);
+      });
+
+      function toggleMenu() {
+        document.body.classList.toggle("open");
+      }
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          document.body.classList.remove("open");
+          menuCheckbox.checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
