@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projectos - Mopic na Track</title>
+    <link rel="stylesheet" href="estilo/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ======== ESTILOS DE PROJECTOS (versão musical com secções extras) ======== */
+      main {
+        padding: 80px 5%;
+        
+        min-height: 100vh;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2 {
+        text-align: center;
+        color: #1e90ff;
+        letter-spacing: 1px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin: 80px 0 40px;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .project-card {
+        background: rgba(20, 20, 40, 0.9);
+        border: 1px solid #1f2a5c;
+        border-radius: 16px;
+        overflow: hidden;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .project-card.visible {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(30, 144, 255, 0.3);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project-card .content {
+        padding: 20px;
+      }
+
+      .project-card h3 {
+        color: #66a6ff;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+      }
+
+      .project-card p {
+        color: #ccc;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+
+      .btn-view {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 18px;
+        background: #1e90ff;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s;
+      }
+
+      .btn-view:hover {
+        background: #0f75d3;
+      }
+
+      /* ======== Secção de valores ======== */
+      .values {
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      .values-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .value-item {
+        background: rgba(30, 30, 60, 0.7);
+        padding: 15px 25px;
+        border-radius: 12px;
+        border: 1px solid #1e90ff;
+        font-weight: 500;
+        color: #fff;
+        transition: transform 0.3s;
+      }
+
+      .value-item:hover {
+        transform: scale(1.1);
+        background: rgba(30, 144, 255, 0.15);
+      }
+
+      /* ======== Slogan ======== */
+      .slogan {
+        margin-top: 80px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #66a6ff;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.6rem; }
+        .slogan { font-size: 1.2rem; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <label class="burger">
+      <input type="checkbox" id="menu-toggle" oninput="toggleMenu()" />
+      <span class="burger-icon"></span>
+    </label>
+
+    <div class="menu">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projectos</a>
+        <a href="team.html">Team</a>
+        <a href="#">Galeria</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <h1>Projectos Musicais</h1>
+
+      <!-- ======== PROJECTOS DO GRUPO ======== -->
+      <section class="projects-grid">
+        <div class="project-card" onclick="openProject(1)">
+          <img src="img/album1.jpg" alt="Mopic na Track - Vibrações" />
+          <div class="content">
+            <h3>💿 Vibrações</h3>
+            <p>O primeiro EP do grupo, misturando drill, afrobeat e trap com letras autênticas e energia contagiante.</p>
+            <a href="#" class="btn-view">Ouvir Agora</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(2)">
+          <img src="img/colab1.jpg" alt="Mopic na Track x JayFlow" />
+          <div class="content">
+            <h3>🎤 Colab: Mopic x JayFlow</h3>
+            <p>Uma colaboração poderosa que combina flows únicos e produção intensa, destacando o talento da Mopic na Track.</p>
+            <a href="#" class="btn-view">Ver Clipe</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(3)">
+          <img src="img/live1.jpg" alt="Mopic na Track ao Vivo" />
+          <div class="content">
+            <h3>🔥 Show Ao Vivo - Luanda</h3>
+            <p>Performance inesquecível capturada ao vivo com público vibrante e energia pura em cada faixa.</p>
+            <a href="#" class="btn-view">Assistir</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== PROJECTOS SOLOS ======== -->
+      <h2>Projectos Solos</h2>
+      <section class="projects-grid">
+        <div class="project-card" onclick="openProject(4)">
+          <img src="img/solo1.jpg" alt="Solo - Yung T" />
+          <div class="content">
+            <h3>🎧 Yung T - “Sem Pressa”</h3>
+            <p>Trap melódico com versos pessoais e produção suave — uma vibe introspectiva que mostra o lado maduro do artista.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(5)">
+          <img src="img/solo2.jpg" alt="Solo - D-Kid" />
+          <div class="content">
+            <h3>🔥 D-Kid - “Na Linha”</h3>
+            <p>Flow rápido e agressivo sobre beats urbanos, representando as ruas e a verdade de quem vive o som.</p>
+            <a href="#" class="btn-view">Ver Clipe</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(6)">
+          <img src="img/solo3.jpg" alt="Solo - Léo Fresh" />
+          <div class="content">
+            <h3>🌙 Léo Fresh - “Noites Frias”</h3>
+            <p>Um mix de R&B e trap, com letras sentimentais e uma vibe chill perfeita para ouvir à noite.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(7)">
+          <img src="img/solo4.jpg" alt="Solo - K-Mix" />
+          <div class="content">
+            <h3>💥 K-Mix - “Ritmo & Fogo”</h3>
+            <p>Energia pura e beats explosivos — o talento do produtor da Mopic em destaque com instrumentais únicos.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== VALORES ======== -->
+      <div class="values">
+        <h2>Os Nossos Valores</h2>
+        <div class="values-list">
+          <div class="value-item">🔥 Autenticidade</div>
+          <div class="value-item">🎶 União</div>
+          <div class="value-item">💯 Verdade</div>
+          <div class="value-item">⚡ Criatividade</div>
+          <div class="value-item">🎤 Paixão pela Música</div>
+        </div>
+      </div>
+
+      <!-- ======== SLOGAN ======== -->
+      <div class="slogan">
+        <p>“Mopic na Track — Onde o Som Encontra a Verdade.”</p>
+      </div>
+    </main>
+
+    <script>
+      const menuCheckbox = document.getElementById("menu-toggle");
+      const menuLinks = document.querySelectorAll(".menu a");
+
+      function toggleMenu() {
+        document.body.classList.toggle("open");
+      }
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          document.body.classList.remove("open");
+          menuCheckbox.checked = false;
+        });
+      });
+
+      // ======== Abrir projectos ========
+      function openProject(id) {
+        switch (id) {
+          case 1:
+            window.open("https://open.spotify.com/", "_blank");
+            break;
+          case 2:
+            window.open("https://www.youtube.com/", "_blank");
+            break;
+          case 3:
+            window.open("https://www.instagram.com/", "_blank");
+            break;
+          default:
+            alert("Projecto disponível em breve!");
+        }
+      }
+
+      // ======== Animação dos cards ========
+      const cards = document.querySelectorAll(".project-card");
+
+      function animateCards() {
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const screenHeight = window.innerHeight;
+          if (cardTop < screenHeight - 100) {
+            card.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animateCards);
+      window.addEventListener("load", animateCards);
+    </script>
+  </body>
+</html>
