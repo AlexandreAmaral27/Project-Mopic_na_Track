@@ -4,150 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactos - Mopic na Track</title>
+    <link rel="stylesheet" href="estilo/contact.css">
     <link rel="stylesheet" href="estilo/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        background: radial-gradient(circle at top left, #0a0a1a, #050510 80%);
-        color: #fff;
-        margin: 0;
-        overflow-x: hidden;
-      }
-
-      main {
-        padding: 80px 5%;
-        min-height: 100vh;
-      }
-
-      h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        color: #1e90ff;
-        margin-bottom: 40px;
-      }
-
-      .contact-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 50px;
-        align-items: start;
-        margin-top: 40px;
-      }
-
-      /* ===== FORMULÁRIO ===== */
-      form {
-        background: rgba(20, 20, 40, 0.9);
-        border: 1px solid #1f2a5c;
-        border-radius: 16px;
-        padding: 30px;
-        box-shadow: 0 10px 25px rgba(30, 144, 255, 0.2);
-      }
-
-      form label {
-        display: block;
-        margin-bottom: 8px;
-        color: #66a6ff;
-        font-weight: 500;
-      }
-
-      form input,
-      form textarea {
-        width: 100%;
-        padding: 12px;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        margin-bottom: 20px;
-        background: #0f162a;
-        color: #fff;
-        font-size: 1rem;
-      }
-
-      form textarea {
-        resize: none;
-        height: 120px;
-      }
-
-      .btn-send {
-        background: #1e90ff;
-        color: #fff;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-
-      .btn-send:hover {
-        background: #0f75d3;
-      }
-
-      /* ===== INFO ===== */
-      .contact-info {
-        background: rgba(20, 20, 40, 0.9);
-        border: 1px solid #1f2a5c;
-        border-radius: 16px;
-        padding: 30px;
-        box-shadow: 0 10px 25px rgba(30, 144, 255, 0.2);
-      }
-
-      .contact-info h2 {
-        color: #66a6ff;
-        margin-bottom: 20px;
-      }
-
-      .contact-info p {
-        margin-bottom: 10px;
-        color: #ccc;
-      }
-
-      .socials {
-        margin-top: 25px;
-        display: flex;
-        gap: 15px;
-      }
-
-      .socials a {
-        background: #1e90ff;
-        color: #fff;
-        padding: 10px 12px;
-        border-radius: 50%;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: transform 0.3s;
-      }
-
-      .socials a:hover {
-        transform: scale(1.2);
-      }
-
-      /* ===== SLOGAN FINAL ===== */
-      .slogan {
-        text-align: center;
-        margin-top: 70px;
-        font-size: 1.3rem;
-        color: #66a6ff;
-        letter-spacing: 1px;
-        font-weight: 600;
-      }
-
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 2rem;
-        }
-        .slogan {
-          font-size: 1.1rem;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -167,31 +25,52 @@
         <a href="contactos.html">Contact</a>
       </nav>
     </div>
-
-    <main>
+  <!-- Conteúdo -->
+    <main class="content">
       <h1>Contacta a Mopic na Track</h1>
+      <p>Para shows, colaborações ou parcerias, fala connosco:</p>
 
       <div class="contact-container">
-        <!-- ===== FORMULÁRIO ===== -->
-        <form id="contactForm">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="O teu nome" required />
+          <a href="https://wa.me/244929764090" target="_blank">
+          <div class="contact-box">
+            <i class="ai-whatsapp-fill"></i>
+            <h3>WhatsApp (Booking)</h3>
+            <p>+244 929 764 090</p>
+          </div>
+          </a>
+       
+         <a href="#">
+        <div class="contact-box">
+          <i class="ai-envelope"></i>
+          <h3>Email</h3>
+          <p>shows@Mopic.na.Track.com</p>
+        </div>
+        </a>
+        
+        <a href="https://www.instagram.com/otg_only.the.gang/?utm_source=ig_web_button_share_sheet" target="_blank">
+        <div class="contact-box">
+          <i class="ai-instagram-fill"></i>
+          <h3>Instagram</h3>
+          <p>@Mopic_na_Track</p>
+        </div>
+        </a>
+        
 
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="O teu e-mail" required />
-
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Escreve a tua mensagem..." required></textarea>
-
-          <button type="submit" class="btn-send">Enviar</button>
-        </form>
-
-        <!-- ===== INFO ===== -->
+         <a href="#" target="_blank">
+        <div class="contact-box">
+          <i class="ai-youtube-fill"></i>
+          <h3>YouTube</h3>
+          <p>Mopic na Track Oficial</p>
+        </div>
+        </a>
+        
+      </div>
+       <!-- ===== INFO ===== -->
         <div class="contact-info">
           <h2>Informações</h2>
           <p><strong>Email:</strong> mopicnatrack@gmail.com</p>
           <p><strong>Localização:</strong> Luanda, Angola</p>
-          <p><strong>Telefone:</strong> +244 999 999 999</p>
+          <p><strong>Telefone:</strong> +244 929 764 090</p>
           <p>Entra em contacto connosco para colaborações, shows ou parcerias.</p>
 
           <div class="socials">
@@ -201,34 +80,13 @@
             <a href="https://www.tiktok.com/" target="_blank">🎵</a>
           </div>
         </div>
-      </div>
+      
 
       <div class="slogan">
         <p>“Mopic na Track — Conecta-te ao Som, Vibra com a Verdade.”</p>
       </div>
     </main>
 
-    <script>
-      const menuCheckbox = document.getElementById("menu-toggle");
-      const menuLinks = document.querySelectorAll(".menu a");
-
-      function toggleMenu() {
-        document.body.classList.toggle("open");
-      }
-
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          document.body.classList.remove("open");
-          menuCheckbox.checked = false;
-        });
-      });
-
-      // ===== FORMULÁRIO (mensagem simulada) =====
-      document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        alert("Mensagem enviada com sucesso! 🎵");
-        this.reset();
-      });
-    </script>
+   <script src="js/menu.js"></script>
   </body>
 </html>

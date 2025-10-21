@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projectos - Feboy Freezer</title>
+    <link rel="stylesheet" href="estilo/projects.css">
+    <link rel="stylesheet" href="estilo/style.css" />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <label class="burger">
+      <input type="checkbox" id="menu-toggle" oninput="toggleMenu()" />
+      <span class="burger-icon"></span>
+    </label>
+
+    <div class="menu">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projectos</a>
+        <a href="team.html">Team</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="contactos.html">Contact</a>
+      </nav>
+    </div>
+
+    <main>
+      <!-- ======== PROJECTOS SOLOS ======== -->
+      <h1>Projectos Solos</h1>
+ 
+      <section class="projects-grid">
+        <div class="project-card" onclick="openProject(4)">
+          <img src="imagens/logo.png" alt="Solo - Feboy Freezer" />
+          <div class="content">
+            <h3>🎧 Feboy Freezer - “Sem Pressa”</h3>
+            <p>Trap melódico com versos pessoais e produção suave — uma vibe introspectiva que mostra o lado maduro do artista.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(5)">
+          <img src="imagens/logo.png" alt="Solo - Feboy Freezer" />
+          <div class="content">
+            <h3>🔥 Feboy Freezer - “Na Linha”</h3>
+            <p>Flow rápido e agressivo sobre beats urbanos, representando as ruas e a verdade de quem vive o som.</p>
+            <a href="#" class="btn-view">Ver Clipe</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(6)">
+          <img src="imagens/logo.png" alt="Solo - Feboy Freezer" />
+          <div class="content">
+            <h3>🌙 Feboy Freezer - “Noites Frias”</h3>
+            <p>Um mix de R&B e trap, com letras sentimentais e uma vibe chill perfeita para ouvir à noite.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject(7)">
+          <img src="imagens/logo.png" alt="Solo - Feboy Freezer" />
+          <div class="content">
+            <h3>💥 Feboy Freezer - “Ritmo & Fogo”</h3>
+            <p>Energia pura e beats explosivos — o talento do produtor da Mopic em destaque com instrumentais únicos.</p>
+            <a href="#" class="btn-view">Ouvir</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======== VALORES ======== -->
+      <div class="values">
+        <h2>Os Nossos Valores</h2>
+        <div class="values-list">
+          <div class="value-item">🔥 Autenticidade</div>
+          <div class="value-item">🎶 União</div>
+          <div class="value-item">💯 Verdade</div>
+          <div class="value-item">⚡ Criatividade</div>
+          <div class="value-item">🎤 Paixão pela Música</div>
+        </div>
+      </div>
+
+      <!-- ======== SLOGAN ======== -->
+      <div class="slogan">
+        <p>“Mopic na Track — Onde o Som Encontra a Verdade.”</p>
+      </div>
+    </main>
+
+   <script src="js/projects.solo.js"></script>
+  </body>
+</html>

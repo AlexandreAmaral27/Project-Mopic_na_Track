@@ -6,6 +6,7 @@
     <title>Team Mopic</title>
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/team.css" />
+    
   </head>
   <body>
       <label class="burger">
@@ -52,7 +53,7 @@
         </div>
       </li>
       <li>
-        <img src="imagens/4.jpg" />
+        <img src="imagens/logo.png" />
         <div class="content">
           <span>
             <h2>Bráulio Diógenes</h2>
@@ -61,30 +62,23 @@
         </div>
       </li>
     </ul>
+   <!-- ======== VALORES ======== -->
+      <div class="values">
+        <h2>Os Nossos Valores</h2>
+        <div class="values-list">
+          <div class="value-item">🔥 Autenticidade</div>
+          <div class="value-item">🎶 União</div>
+          <div class="value-item">💯 Verdade</div>
+          <div class="value-item">⚡ Criatividade</div>
+          <div class="value-item">🎤 Paixão pela Música</div>
+        </div>
+      </div>
 
-     <script>
-      const intro = document.getElementById("intro");
-      const menuCheckbox = document.getElementById("menu-toggle");
-      const menuLinks = document.querySelectorAll(".menu a");
-      const introSound = document.getElementById("introSound");
+      <!-- ======== SLOGAN ======== -->
+      <div class="slogan">
+        <p>“Mopic na Track — Onde o Som Encontra a Verdade.”</p>
+      </div>
 
-      window.addEventListener("load", () => {
-        introSound.play().catch(() => console.log("Som bloqueado pelo navegador"));
-        setTimeout(() => {
-          intro.classList.add("hidden");
-        }, 3000);
-      });
-
-      function toggleMenu() {
-        document.body.classList.toggle("open");
-      }
-
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          document.body.classList.remove("open");
-          menuCheckbox.checked = false;
-        });
-      });
-    </script>
+    <script src="js/intro.js"></script>
   </body>
 </html>
